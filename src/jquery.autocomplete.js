@@ -100,12 +100,12 @@
         that.suggestionsContainer = null;
         that.options = $.extend({}, defaults, options);
         that.classes = {
-            selected: 'autocomplete-selected',
-            suggestion: 'autocomplete-suggestion'
+            selected: that.options.containerClass + '-selected',
+            suggestion: that.options.containerClass + '-suggestion'
         };
         that.hint = null;
         that.hintValue = '';
-        that.selection = null;
+        that.selection = null;        
 
         // Initialize and set options:
         that.initialize();
